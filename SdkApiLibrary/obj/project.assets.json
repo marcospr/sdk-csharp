@@ -2684,9 +2684,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\SdkApiLibrary\\SdkApiLibrary.csproj",
-      "projectName": "SdkApiLibrary",
-      "projectPath": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\SdkApiLibrary\\SdkApiLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\SdkApiLibrary\\SdkApiLibraries.csproj",
+      "projectName": "SdkApiLibraries",
+      "projectPath": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\SdkApiLibrary\\SdkApiLibraries.csproj",
       "packagesPath": "C:\\Users\\aoet\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\SdkApiLibrary\\obj\\",
       "projectStyle": "PackageReference",

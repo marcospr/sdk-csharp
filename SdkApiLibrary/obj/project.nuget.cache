@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qE8TOtNoJQvcDn/bg0HJFHcS/MXUJ51USjsFEscYdT6zLQ7qhA7yrwqgag/TB9yfoM8lucMIObGI8THNRLbnVA==",
+  "dgSpecHash": "c8/WEuZmotUaTpI4LwJnY/kHjqyU+bDF5sxRwKepAjFLb8UIAkW1HphjYH125j/vnjdd0yEqqVGSNCkd7/87Vg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\SdkApiLibrary\\SdkApiLibrary.csproj",
+  "projectFilePath": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\SdkApiLibrary\\SdkApiLibraries.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aoet\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\aoet\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
