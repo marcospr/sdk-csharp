@@ -41,6 +41,10 @@ namespace SdkApiLibrary.Utils
             return default(OUT);
         }
 
+        internal void DoGetAsync(object p)
+        {
+            throw new NotImplementedException();
+        }
 
         public async Task<OUT> DoPostAsync(string path, IN entityIn)
         {

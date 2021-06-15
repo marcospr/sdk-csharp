@@ -1,5 +1,5 @@
-﻿using ConsoleApp1.Models.Response;
-using ConsoleApp1.Utils;
+﻿using SdkApiB2b.model.Response;
+using SdkApiLibrary.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,12 +30,6 @@ namespace SdkApiLibrary
             FormasPagamentoDTO response = await requestFormasPagamento.DoGetAsync("/campanhas/" + idCampanha + "/formas-pagamento/opcoes-parcelamento", queryParams);
             return response;
         }
-
-
-
-
-
-
 
 
     }
