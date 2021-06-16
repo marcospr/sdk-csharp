@@ -1,4 +1,5 @@
-﻿using SdkApiLibrary.utils;
+﻿using SdkApiB2bLibrary.model.response;
+using SdkApiB2bLibrary.utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
