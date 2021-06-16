@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Authors>Antonio Leandrini / Marcos P Rocha</Authors>
+    <Company>Via</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\Users\aoet\Documents\NuGet\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>

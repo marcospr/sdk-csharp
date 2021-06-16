@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using SdkApiB2b.model.response;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +12,7 @@ namespace SdkApiLibraries.model.response
     {
 
         [JsonProperty("data")]
-        public Data Data { get; set; }
+        public Chave Data { get; set; }
 
         [JsonProperty("error")]
         public Error Error { get; set; }

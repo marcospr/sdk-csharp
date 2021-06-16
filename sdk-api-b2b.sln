@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdkApiB2b-exemplo", "sdk-api-b2b\SdkApiB2b-exemplo.csproj", "{642B2A3C-4298-4C98-8865-2FF82E50E476}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdkApiLibrary", "SdkApiLibrary\SdkApiLibrary.csproj", "{11F3CD04-3B42-4343-912A-5B1EE70FA873}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdkApiLibraries", "SdkApiLibrary\SdkApiLibraries.csproj", "{11F3CD04-3B42-4343-912A-5B1EE70FA873}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdkApiB2bTest", "SdkApiB2bTest\SdkApiB2bTest.csproj", "{D18AE414-193A-454E-8D6D-33AFB3B1EB2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdkApiB2bTest", "SdkApiB2bTest\SdkApiB2bTest.csproj", "{D18AE414-193A-454E-8D6D-33AFB3B1EB2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

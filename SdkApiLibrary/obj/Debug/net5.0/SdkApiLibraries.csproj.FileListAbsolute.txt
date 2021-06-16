@@ -1,0 +1,11 @@
+C:\Users\aoet\Documents\NuGet\net5.0\SdkApiLibraries.deps.json
+C:\Users\aoet\Documents\NuGet\net5.0\SdkApiLibraries.dll
+C:\Users\aoet\Documents\NuGet\net5.0\ref\SdkApiLibraries.dll
+C:\Users\aoet\Documents\NuGet\net5.0\SdkApiLibraries.pdb
+C:\Users\aoet\Documents\git\sdk-csharp\SdkApiLibrary\obj\Debug\net5.0\SdkApiLibraries.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aoet\Documents\git\sdk-csharp\SdkApiLibrary\obj\Debug\net5.0\SdkApiLibraries.AssemblyInfoInputs.cache
+C:\Users\aoet\Documents\git\sdk-csharp\SdkApiLibrary\obj\Debug\net5.0\SdkApiLibraries.AssemblyInfo.cs
+C:\Users\aoet\Documents\git\sdk-csharp\SdkApiLibrary\obj\Debug\net5.0\SdkApiLibraries.csproj.CoreCompileInputs.cache
+C:\Users\aoet\Documents\git\sdk-csharp\SdkApiLibrary\obj\Debug\net5.0\SdkApiLibraries.dll
+C:\Users\aoet\Documents\git\sdk-csharp\SdkApiLibrary\obj\Debug\net5.0\ref\SdkApiLibraries.dll
+C:\Users\aoet\Documents\git\sdk-csharp\SdkApiLibrary\obj\Debug\net5.0\SdkApiLibraries.pdb
