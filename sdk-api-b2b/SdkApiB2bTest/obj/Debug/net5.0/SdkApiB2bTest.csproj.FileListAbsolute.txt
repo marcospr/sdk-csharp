@@ -97,3 +97,6 @@ C:\workspace\git\sdk-csharp\sdk-api-b2b\SdkApiB2bTest\obj\Debug\net5.0\SdkApiB2b
 C:\workspace\git\sdk-csharp\sdk-api-b2b\SdkApiB2bTest\obj\Debug\net5.0\ref\SdkApiB2bTest.dll
 C:\workspace\git\sdk-csharp\sdk-api-b2b\SdkApiB2bTest\obj\Debug\net5.0\SdkApiB2bTest.pdb
 C:\workspace\git\sdk-csharp\sdk-api-b2b\SdkApiB2bTest\obj\Debug\net5.0\SdkApiB2bTest.genruntimeconfig.cache
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bTest\obj\Debug\net5.0\SdkApiB2bTest.dll
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bTest\obj\Debug\net5.0\ref\SdkApiB2bTest.dll
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bTest\obj\Debug\net5.0\SdkApiB2bTest.pdb

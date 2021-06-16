@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\workspace\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bExemplo\\SdkApiB2bExemplo.csproj": {}
+    "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bExemplo\\SdkApiB2bExemplo.csproj": {}
   },
   "projects": {
-    "C:\\workspace\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bExemplo\\SdkApiB2bExemplo.csproj": {
+    "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bExemplo\\SdkApiB2bExemplo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\workspace\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bExemplo\\SdkApiB2bExemplo.csproj",
+        "projectUniqueName": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bExemplo\\SdkApiB2bExemplo.csproj",
         "projectName": "SdkApiB2bExemplo",
-        "projectPath": "C:\\workspace\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bExemplo\\SdkApiB2bExemplo.csproj",
-        "packagesPath": "C:\\Users\\msph\\.nuget\\packages\\",
-        "outputPath": "C:\\workspace\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bExemplo\\obj\\",
+        "projectPath": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bExemplo\\SdkApiB2bExemplo.csproj",
+        "packagesPath": "C:\\Users\\aoet\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bExemplo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\msph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aoet\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\workspace\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bLibrary\\SdkApiB2bLibrary.csproj": {
-                "projectPath": "C:\\workspace\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bLibrary\\SdkApiB2bLibrary.csproj"
+              "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bLibrary\\SdkApiB2bLibrary.csproj": {
+                "projectPath": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bLibrary\\SdkApiB2bLibrary.csproj"
               }
             }
           }
@@ -68,17 +68,17 @@
         }
       }
     },
-    "C:\\workspace\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bLibrary\\SdkApiB2bLibrary.csproj": {
+    "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bLibrary\\SdkApiB2bLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\workspace\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bLibrary\\SdkApiB2bLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bLibrary\\SdkApiB2bLibrary.csproj",
         "projectName": "SdkApiB2bLibrary",
-        "projectPath": "C:\\workspace\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bLibrary\\SdkApiB2bLibrary.csproj",
-        "packagesPath": "C:\\Users\\msph\\.nuget\\packages\\",
-        "outputPath": "C:\\workspace\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bLibrary\\obj\\",
+        "projectPath": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bLibrary\\SdkApiB2bLibrary.csproj",
+        "packagesPath": "C:\\Users\\aoet\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aoet\\Documents\\git\\sdk-csharp\\sdk-api-b2b\\SdkApiB2bLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\msph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aoet\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,6 +103,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

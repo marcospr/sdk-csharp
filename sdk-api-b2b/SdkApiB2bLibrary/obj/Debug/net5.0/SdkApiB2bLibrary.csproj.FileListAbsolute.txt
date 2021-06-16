@@ -34,3 +34,15 @@ C:\workspace\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\obj\Debug\net5.0\SdkApi
 C:\workspace\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\obj\Debug\net5.0\SdkApiB2bLibrary.dll
 C:\workspace\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\obj\Debug\net5.0\ref\SdkApiB2bLibrary.dll
 C:\workspace\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\obj\Debug\net5.0\SdkApiB2bLibrary.pdb
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\bin\Debug\net5.0\SdkApiB2bLibrary.deps.json
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\bin\Debug\net5.0\SdkApiB2bLibrary.dll
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\bin\Debug\net5.0\ref\SdkApiB2bLibrary.dll
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\bin\Debug\net5.0\SdkApiB2bLibrary.pdb
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\obj\Debug\net5.0\SdkApiB2bLibrary.csproj.AssemblyReference.cache
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\obj\Debug\net5.0\SdkApiB2bLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\obj\Debug\net5.0\SdkApiB2bLibrary.AssemblyInfoInputs.cache
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\obj\Debug\net5.0\SdkApiB2bLibrary.AssemblyInfo.cs
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\obj\Debug\net5.0\SdkApiB2bLibrary.csproj.CoreCompileInputs.cache
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\obj\Debug\net5.0\SdkApiB2bLibrary.dll
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\obj\Debug\net5.0\ref\SdkApiB2bLibrary.dll
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bLibrary\obj\Debug\net5.0\SdkApiB2bLibrary.pdb

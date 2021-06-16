@@ -42,3 +42,6 @@ C:\workspace\git\sdk-csharp\sdk-api-b2b\SdkApiB2bExemplo\obj\Debug\net5.0\SdkApi
 C:\workspace\git\sdk-csharp\sdk-api-b2b\SdkApiB2bExemplo\obj\Debug\net5.0\ref\SdkApiB2bExemplo.dll
 C:\workspace\git\sdk-csharp\sdk-api-b2b\SdkApiB2bExemplo\obj\Debug\net5.0\SdkApiB2bExemplo.pdb
 C:\workspace\git\sdk-csharp\sdk-api-b2b\SdkApiB2bExemplo\obj\Debug\net5.0\SdkApiB2bExemplo.genruntimeconfig.cache
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bExemplo\obj\Debug\net5.0\SdkApiB2bExemplo.dll
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bExemplo\obj\Debug\net5.0\ref\SdkApiB2bExemplo.dll
+C:\Users\aoet\Documents\git\sdk-csharp\sdk-api-b2b\SdkApiB2bExemplo\obj\Debug\net5.0\SdkApiB2bExemplo.pdb
