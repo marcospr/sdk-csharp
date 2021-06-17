@@ -22,7 +22,7 @@ namespace SdkApiLibrary
         public async Task<ProdutosDTO> GetListaProdutos(String idLogista, List<String> idSKu)
         {
             var queryParams = ArrayQueryParamBuilder(idSKu, "idSKu");
-            ProdutosDTO dto = await requestProdutos.DoGetAsync("/lojistas/" + idLogista + "/produtos", queryParams);
+            ProdutosDTO dto = await requestProdutos.DoGetAsync("/lojistas/" + idLogista + "/produtos" + queryParams, null);
             return dto;
         }
 
@@ -31,22 +31,31 @@ namespace SdkApiLibrary
             Dictionary<String, String> queryParams = new Dictionary<string, string>();
             queryParams.Add("idLojista", idLojista);
             queryParams.Add("cnpj", cnpj);
-            ProdutoDTO dto = await requestProduto.DoGetAsync("/campanhas/" + idCampanha + "/produtos/" + idSKu, null);
-            return null;
+            ProdutoDTO dto = await requestProduto.DoGetAsync("/campanhas/" + idCampanha + "/produtos/" + idSKu, queryParams);
+            return dto;
         }
 
 
-        private Dictionary<String, String> ArrayQueryParamBuilder(List<String> idSKu, String paramName)
+        private String ArrayQueryParamBuilder(List<String> idSKu, String paramName)
         {
-            Dictionary<String, String> queryParams = new Dictionary<string, string>();
+
+            StringBuilder sb = new StringBuilder();
             foreach (var param in idSKu)
             {
                 if(param != null)
                 {
-                    queryParams.Add(paramName, param);
+                    if (sb.Length == 0)
+                    {
+                        sb.Append("?");
+                    }
+                    else
+                    {
+                        sb.Append("&");
+                    }
+                    sb.Append(paramName).Append("=").Append(param);
                 }
             }
-            return queryParams;
+            return sb.ToString();
         }
 
 

@@ -28,7 +28,7 @@ namespace SdkApiB2bLibrary.utils
             try
             {
             HttpResponseMessage response = await client.GetAsync(fullPath);
-            response.EnsureSuccessStatusCode();
+        //    response.EnsureSuccessStatusCode();
             string jsonContent = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<OUT>(jsonContent);
             return result;
