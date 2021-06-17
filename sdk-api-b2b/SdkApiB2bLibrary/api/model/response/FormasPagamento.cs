@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SdkApiB2bLibrary.model.response
 {
-    class FormasPagamento
+    public class FormasPagamento
     {
         [JsonProperty("idFormaPagamento")]
         public int IdFormaPagamento { get; set; }

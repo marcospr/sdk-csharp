@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SdkApiLibrary;
 using System;
 
 namespace SdkApiB2bTest
@@ -6,6 +7,8 @@ namespace SdkApiB2bTest
     [TestClass]
     public class PedidoApiTest
     {
+        
+
         [TestMethod]
         public void TestMethod1()
         {

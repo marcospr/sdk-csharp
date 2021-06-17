@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SdkApiLibrary
 {
-    class CampanhaApi
+    public class CampanhaApi
     {
         private RequestUtil<String, CampanhaDTO> requestCampanha = new RequestUtil<String, CampanhaDTO>();
         private RequestUtil<String, FormasPagamentoDTO> requestFormasPagamento = new RequestUtil<String, FormasPagamentoDTO>();

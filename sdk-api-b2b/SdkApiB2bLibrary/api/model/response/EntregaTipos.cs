@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SdkApiB2bLibrary.model.response
 {
-    class EntregaTipos
+    public class EntregaTipos
     {
 
         [JsonProperty("idEntregaTipo")]

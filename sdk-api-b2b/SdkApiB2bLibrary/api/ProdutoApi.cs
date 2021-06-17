@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SdkApiLibrary
 {
-    class ProdutoApi
+    public class ProdutoApi
     {
         private RequestUtil<String, ProdutoDTO> requestProduto = new RequestUtil<String, ProdutoDTO>();
         private RequestUtil<String, ProdutosDTO> requestProdutos = new RequestUtil<String, ProdutosDTO>();

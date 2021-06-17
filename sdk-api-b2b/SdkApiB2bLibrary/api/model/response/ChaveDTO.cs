@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using SdkApiB2b.model.response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SdkApiB2bLibrary.model.response
 {
-    class ChaveDTO
+    public class ChaveDTO
     {
 
         [JsonProperty("data")]

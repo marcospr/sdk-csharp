@@ -8,11 +8,9 @@ using System.Threading.Tasks;
 
 namespace SdkApiLibraries
 {
-    class SegurancaApi
+    public class SegurancaApi
     {
         private RequestUtil<String, ChaveDTO> requestProduto = new RequestUtil<String, ChaveDTO>();
-
-
 
         public async Task<ChaveDTO> GetChave()
         { 
