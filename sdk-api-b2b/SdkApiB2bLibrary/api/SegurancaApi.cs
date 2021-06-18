@@ -10,7 +10,7 @@ namespace SdkApiLibraries
 {
     public class SegurancaApi
     {
-        private RequestUtil<String, ChaveDTO> requestProduto = new RequestUtil<String, ChaveDTO>();
+        private readonly RequestUtil<String, ChaveDTO> requestProduto = new();
 
         public async Task<ChaveDTO> GetChave()
         { 

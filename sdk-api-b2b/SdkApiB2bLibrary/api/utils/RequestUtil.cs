@@ -10,10 +10,10 @@ namespace SdkApiB2bLibrary.utils
 {
     public class RequestUtil<IN, OUT>
     {
-        static string basePath = "http://api-integracao-extra.hlg-b2b.net";
-        static string token = "H9xO4+R8GUy+18nUCgPOlg==";
+        static readonly string basePath = "http://api-integracao-extra.hlg-b2b.net";
+        static readonly string token = "H9xO4+R8GUy+18nUCgPOlg==";
 
-        private static HttpClient client = new ();
+        private static readonly HttpClient client = new ();
 
         public RequestUtil()
         {
@@ -31,7 +31,7 @@ namespace SdkApiB2bLibrary.utils
 
             if (queryParams != null)
             {
-                fullPath = fullPath + QueryParamStringBuilder(queryParams);
+                fullPath += QueryParamStringBuilder(queryParams);
             }
 
             try
@@ -47,7 +47,7 @@ namespace SdkApiB2bLibrary.utils
                 Console.WriteLine(e.Message);
             }
 
-            return default(OUT);
+            return default;
         }
 
         internal void DoGetAsync(object p)
@@ -59,7 +59,7 @@ namespace SdkApiB2bLibrary.utils
         {         
             string json = System.Text.Json.JsonSerializer.Serialize(entityIn);
             Console.WriteLine($"body entrada: {json}");
-            StringContent data = new StringContent(json, Encoding.UTF8, "application/json");
+            StringContent data = new(json, Encoding.UTF8, "application/json");
             client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", token);
             HttpResponseMessage response = await client.PostAsync(path, data);
             string jsonContent = response.Content.ReadAsStringAsync().Result;   
@@ -71,7 +71,7 @@ namespace SdkApiB2bLibrary.utils
         {
             string json = System.Text.Json.JsonSerializer.Serialize(entityIn);
             Console.WriteLine($"body entrada: {json}");
-            StringContent data = new StringContent(json, Encoding.UTF8, "application/json");
+            StringContent data = new(json, Encoding.UTF8, "application/json");
             client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", token);
             HttpResponseMessage response = await client.PatchAsync(path, data);
             string jsonContent = response.Content.ReadAsStringAsync().Result;
@@ -80,22 +80,22 @@ namespace SdkApiB2bLibrary.utils
         }
 
 
-        private String QueryParamStringBuilder(Dictionary<String, String> queryParams)
+        private static String QueryParamStringBuilder(Dictionary<String, String> queryParams)
         {
-            StringBuilder b = new StringBuilder();
+            StringBuilder b = new();
             foreach (var keyValuePair in queryParams)
             {
                 if (keyValuePair.Value != null)
                 {
                     if (b.Length == 0)
                     {
-                        b.Append("?");
+                        b.Append('?');
                     }
                     else
                     {
-                        b.Append("&");
+                        b.Append('&');
                     }
-                    b.Append(keyValuePair.Key).Append("=").Append(keyValuePair.Value);
+                    b.Append(keyValuePair.Key).Append('=').Append(keyValuePair.Value);
                 }
             }
             return b.ToString();

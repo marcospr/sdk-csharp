@@ -10,11 +10,11 @@ namespace SdkApiLibrary
 {
     public class FormaPagamentoApi
     {
-        private RequestUtil<String, OpcoesParcelamentoDTO> requestCampanha = new RequestUtil<String, OpcoesParcelamentoDTO>();
+        private readonly RequestUtil<String, OpcoesParcelamentoDTO> requestCampanha = new();
 
         public async Task<OpcoesParcelamentoDTO> GetOpcoesParcelamentoAsync(String idFormaPagamento, String idCampanha, String cnpj, String valorParcelar)
         {
-            Dictionary<String, String> queryParams = new Dictionary<string, string>();
+            Dictionary<String, String> queryParams = new();
             queryParams.Add("idCampanha", idCampanha);
             queryParams.Add("cnpj", cnpj);
             queryParams.Add("valorParcelar", valorParcelar);

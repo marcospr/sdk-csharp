@@ -11,7 +11,7 @@ namespace SdkApiB2bTest
     [TestClass]
     public class ProdutoApiTest
     {
-        ProdutoApi api = new ProdutoApi();
+        readonly ProdutoApi api = new();
 
         [TestMethod]
         public async Task TestGetDadosProdutosSucess()

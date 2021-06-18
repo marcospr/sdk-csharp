@@ -10,12 +10,12 @@ namespace SdkApiLibrary
 {
     public class CampanhaApi
     {
-        private RequestUtil<String, CampanhaDTO> requestCampanha = new RequestUtil<String, CampanhaDTO>();
-        private RequestUtil<String, FormasPagamentoDTO> requestFormasPagamento = new RequestUtil<String, FormasPagamentoDTO>();
+        private readonly RequestUtil<String, CampanhaDTO> requestCampanha = new();
+        private readonly RequestUtil<String, FormasPagamentoDTO> requestFormasPagamento = new();
 
         public async Task<CampanhaDTO> GetCampanhasAsync(String dtInicio, String dtFim)
         {
-            Dictionary<String, String> queryParams = new Dictionary<string, string>();
+            Dictionary<String, String> queryParams = new();
             queryParams.Add("dataInicio", dtInicio);
             queryParams.Add("dataFim", dtFim);
             CampanhaDTO response = await requestCampanha.DoGetAsync("/campanhas", queryParams);
@@ -25,7 +25,7 @@ namespace SdkApiLibrary
 
         public async Task<FormasPagamentoDTO> GetOpcoesPagamentoAsync(String idCampanha, String cnpj)
         {
-            Dictionary<String, String> queryParams = new Dictionary<string, string>();
+            Dictionary<String, String> queryParams = new();
             queryParams.Add("cnpj", cnpj);
             FormasPagamentoDTO response = await requestFormasPagamento.DoGetAsync("/campanhas/" + idCampanha + "/formas-pagamento/opcoes-parcelamento", queryParams);
             return response;
