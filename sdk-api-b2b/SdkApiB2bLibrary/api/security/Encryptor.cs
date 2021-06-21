@@ -18,7 +18,7 @@ namespace SdkApiB2bLibrary.api.client
 		}
 		public string Encript(String texto)
 		{
-			//var objChave = new System.Security.Cryptography.X509Certificates.X509Certificate2(Encoding.UTF8.GetBytes(ChavePublica));
+			//var objChave = new System.Security.Cryptography.X509Certificates.X509Certificate2();
 			//objChave.Import(Encoding.UTF8.GetBytes(ChavePublica));
 			//var rsa = (RSACryptoServiceProvider)objChave.PublicKey.Key;
 
@@ -26,7 +26,6 @@ namespace SdkApiB2bLibrary.api.client
 			RSAParameters RSAKeyInfo = rsa.ExportParameters(false);			
 			RSAKeyInfo.Modulus = Encoding.UTF8.GetBytes(ChavePublica);		
 			rsa.ImportParameters(RSAKeyInfo);
-
 
 			var textoEncriptado = rsa.Encrypt(Encoding.UTF8.GetBytes(texto), false);
 			string outputData = Convert.ToBase64String(textoEncriptado);
