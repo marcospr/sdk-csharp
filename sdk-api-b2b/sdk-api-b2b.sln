@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdkApiB2bTest", "SdkApiB2bT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdkApiB2bLibrary", "SdkApiB2bLibrary\SdkApiB2bLibrary.csproj", "{708410EC-BB72-48BF-9C53-C245745EC24E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdkApiB2bExemplo", "SdkApiB2bExemplo\SdkApiB2bExemplo.csproj", "{5A449CF8-21E5-492A-BA07-BC4FE05D1003}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{708410EC-BB72-48BF-9C53-C245745EC24E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{708410EC-BB72-48BF-9C53-C245745EC24E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{708410EC-BB72-48BF-9C53-C245745EC24E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A449CF8-21E5-492A-BA07-BC4FE05D1003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A449CF8-21E5-492A-BA07-BC4FE05D1003}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A449CF8-21E5-492A-BA07-BC4FE05D1003}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A449CF8-21E5-492A-BA07-BC4FE05D1003}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

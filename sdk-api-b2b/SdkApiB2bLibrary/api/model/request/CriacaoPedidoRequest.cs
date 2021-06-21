@@ -17,12 +17,12 @@ namespace SdkApiB2bLibrary.api.model.request
 		public string IdPedidoMktplc{ get; set; }
 		public string SenhaAtendimento{ get; set; }
 		public string Apolice{ get; set; }
-		public int Administrador{ get; set; }
+		public int? Administrador { get; set; }
 		public string ParametrosExtras{ get; set; }
 		public double ValorFrete{ get; set; }
 		public bool AguardarConfirmacao{ get; set; }
 		public bool OptantePeloSimples{ get; set; }
-		public bool PssuiPagtoComplementar{ get; set; }
+		public bool PossuiPagtoComplementar{ get; set; }
 		public List<PagamentoComplementarDto> PagtosComplementares{ get; set; }
 		public EntregaDadosDto DadosEntrega{ get; set; }
 		public EnderecoCobrancaDto EnderecoCobranca{ get; set; }

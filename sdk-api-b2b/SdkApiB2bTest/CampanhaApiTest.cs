@@ -12,8 +12,7 @@ namespace SdkApiB2bTest
     [TestClass]
     public class CampanhaApiTest
     {
-
-        CampanhaApi api = new CampanhaApi();
+        private readonly CampanhaApi api = new();
 
         [TestMethod]
         public async Task TestGetCampanhaSucess()

@@ -12,8 +12,7 @@ namespace SdkApiB2bTest
     [TestClass]
     public class FormaPagamentoApiTest
     {
-
-        FormaPagamentoApi api = new FormaPagamentoApi();
+        private readonly FormaPagamentoApi api = new();
 
         [TestMethod]
         public async Task TestGetOpcoesParcelamentoSucess()

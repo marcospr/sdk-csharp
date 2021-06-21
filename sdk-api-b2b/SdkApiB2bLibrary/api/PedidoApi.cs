@@ -14,7 +14,7 @@ namespace SdkApiB2bLibrary.api
 {
     public class PedidoApi
     {
-        public  RequestUtil<PedidoCarrinho, CalculoCarrinho> RequestUtilPedidoCarrinho { get;  }
+        public RequestUtil<PedidoCarrinho, CalculoCarrinho> RequestUtilPedidoCarrinho { get; }
 
         public RequestUtil<string, PedidoParceiroData> RequestUtilPedidoParceiro { get; }
 
@@ -24,15 +24,8 @@ namespace SdkApiB2bLibrary.api
 
         public RequestUtil<CriacaoPedidoRequest, CriacaoPedidoDTO> RequestUtilCriacaoPedido { get; }
 
-        public String BasePath { get; }
-
-        public String Authorization { get; }
-
-        public PedidoApi(String basePath, String authorization)
+        public PedidoApi()
         {
-            this.BasePath = basePath;
-            this.Authorization = authorization;
-
             RequestUtilPedidoCarrinho = new RequestUtil<PedidoCarrinho, CalculoCarrinho>();
             RequestUtilPedidoParceiro = new RequestUtil<string, PedidoParceiroData>();
             RequestUtilConfirmacaoReqDTO = new RequestUtil<ConfirmacaoReqDTO, ConfirmacaoDTO>();
@@ -50,9 +43,9 @@ namespace SdkApiB2bLibrary.api
             }
 
             // create path and map variables
-            String path = BasePath + "/pedidos/carrinho";
+            String path = "/pedidos/carrinho";
 
-            return await RequestUtilPedidoCarrinho.DoPostAsync(path, Authorization, pedidosCarrinho);
+            return await RequestUtilPedidoCarrinho.DoPostAsync(path, pedidosCarrinho);
         }
 
         public async Task<PedidoParceiroData> GetDadosPedidoParceiro(Dictionary<String, String> pathParams, Dictionary<String, String> queryParams)
@@ -65,9 +58,9 @@ namespace SdkApiB2bLibrary.api
             }
 
             // create path and map variables
-            String path = BasePath + string.Format("/pedidos/{0}", pathParams["idCompra"]);
+            String path = string.Format("/pedidos/{0}", pathParams["idCompra"]);
 
-            return await RequestUtilPedidoParceiro.DoGetAsync(path, Authorization, queryParams);
+            return await RequestUtilPedidoParceiro.DoGetAsync(path, queryParams);
         }
 
         public async Task<ConfirmacaoDTO> PatchPedidosCancelamentoOrConfirmacao(ConfirmacaoReqDTO confirmacaoPedido,
@@ -88,9 +81,9 @@ namespace SdkApiB2bLibrary.api
             }
 
             // create path and map variables
-            String path = BasePath + String.Format("/pedidos/{0}", variableParams["idCompra"]);
+            String path = String.Format("/pedidos/{0}", variableParams["idCompra"]);
 
-            return await RequestUtilConfirmacaoReqDTO.DoPatchPostAsync(path, Authorization, confirmacaoPedido);
+            return await RequestUtilConfirmacaoReqDTO.DoPatchPostAsync(path, confirmacaoPedido);
         }
 
         public async Task<String> GetNotaFiscalPedido(Dictionary<String, String> pathParams)
@@ -101,10 +94,10 @@ namespace SdkApiB2bLibrary.api
                 throw new ApiException(400, "Missing the required parameter 'pathParams'");
             }
             // create path and map variables
-            String path = BasePath + String.Format("/pedidos/{0}/entregas/{1}/nfe/{2}", pathParams["idCompra"],
+            String path = String.Format("/pedidos/{0}/entregas/{1}/nfe/{2}", pathParams["idCompra"],
                         pathParams["idCompraEntrega"], pathParams["formato"]);
 
-            return await RequestUtilNotaFiscalPedido.DoGetAsync(path, Authorization, pathParams);
+            return await RequestUtilNotaFiscalPedido.DoGetAsync(path, pathParams);
         }
 
         public async Task<CriacaoPedidoDTO> PostCriarPedido(CriacaoPedidoRequest pedido)
@@ -117,9 +110,9 @@ namespace SdkApiB2bLibrary.api
             }
 
             // create path and map variables
-            String path = BasePath + "/pedidos";
+            String path = "/pedidos";
 
-            return await RequestUtilCriacaoPedido.DoPostAsync(path, Authorization, pedido);
+            return await RequestUtilCriacaoPedido.DoPostAsync(path, pedido);
         }
 
     }

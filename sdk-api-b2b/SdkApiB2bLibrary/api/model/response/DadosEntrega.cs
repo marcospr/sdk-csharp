@@ -12,6 +12,6 @@ namespace SdkApiB2bLibrary.api.model.response
         public double ValorFrete { get; set; }
         public int IdEntregaTipo { get; set; }
         public int IdEnderecoLojaFisica { get; set; }
-        public int IdUnidadeNegocio { get; set; }
+        public int? IdUnidadeNegocio { get; set; }
     }
 }

@@ -15,9 +15,11 @@ namespace SdkApiLibrary
 
         public async Task<CampanhaDTO> GetCampanhasAsync(String dtInicio, String dtFim)
         {
-            Dictionary<String, String> queryParams = new();
-            queryParams.Add("dataInicio", dtInicio);
-            queryParams.Add("dataFim", dtFim);
+            Dictionary<String, String> queryParams = new()
+            {
+                { "dataInicio", dtInicio },
+                { "dataFim", dtFim }
+            };
             CampanhaDTO response = await requestCampanha.DoGetAsync("/campanhas", queryParams);
             return response;
         }
@@ -25,8 +27,11 @@ namespace SdkApiLibrary
 
         public async Task<FormasPagamentoDTO> GetOpcoesPagamentoAsync(String idCampanha, String cnpj)
         {
-            Dictionary<String, String> queryParams = new();
-            queryParams.Add("cnpj", cnpj);
+            Dictionary<String, String> queryParams = new()
+            {
+                { "cnpj", cnpj }
+            };
+
             FormasPagamentoDTO response = await requestFormasPagamento.DoGetAsync("/campanhas/" + idCampanha + "/formas-pagamento/opcoes-parcelamento", queryParams);
             return response;
         }

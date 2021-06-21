@@ -11,11 +11,11 @@ namespace SdkApiB2bLibrary.api.model.response
      
     public string CodigoDoErro { get; set; }
      
-    public int ValorComplementar { get; set; }
+    public double ValorComplementar { get; set; }
     
     public int QuantidadeParcelas { get; set; }
    
-    public int ValorParcela { get; set; }
+    public double ValorParcela { get; set; }
      
     public int IdFormaPagamento { get; set; }
      

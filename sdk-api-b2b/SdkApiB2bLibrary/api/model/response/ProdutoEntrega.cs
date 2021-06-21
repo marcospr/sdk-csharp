@@ -16,6 +16,6 @@ namespace SdkApiB2bLibrary.api.model.response
         public double Frete{ get; set; }
         public double ValorAdicional{ get; set; }
         public double ValorTotal{ get; set; }
-        public int IdLojista{ get; set; }
+        public double IdLojista{ get; set; } // deveria ser int, verificar com o time de B2B
     }
 }

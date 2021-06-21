@@ -9,7 +9,7 @@ namespace SdkApiB2bLibrary.api.model.response
     public class DadosPagamentoComplementar
     {
         public List<Pagamento> Pagamentos { get; set; }
-        public int ValorTotalComplementar { get; set; }
-        public int ValorTotalComplementarComJuros { get; set; }
+        public double ValorTotalComplementar { get; set; }
+        public double ValorTotalComplementarComJuros { get; set; }
     }
 }
