@@ -28,9 +28,11 @@ namespace SdkApiLibrary
 
         public async Task<ProdutoDTO> GetDadosProdutoCampanha(String idCampanha, String idSKu, String cnpj, String idLojista)
         {
-            Dictionary<String, String> queryParams = new();
-            queryParams.Add("idLojista", idLojista);
-            queryParams.Add("cnpj", cnpj);
+            Dictionary<String, String> queryParams = new()
+            {
+                { "idLojista", idLojista },
+                { "cnpj", cnpj }
+            };
             ProdutoDTO dto = await requestProduto.DoGetAsync("/campanhas/" + idCampanha + "/produtos/" + idSKu, queryParams);
             return dto;
         }

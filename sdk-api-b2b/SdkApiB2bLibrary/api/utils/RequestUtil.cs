@@ -10,10 +10,10 @@ namespace SdkApiB2bLibrary.utils
 {
     public class RequestUtil<IN, OUT>
     {
-        static readonly string basePath = "http://api-integracao-extra.hlg-b2b.net";
-        static readonly string token = "H9xO4+R8GUy+18nUCgPOlg==";
+        private const string BASE_PATH = "http://api-integracao-extra.hlg-b2b.net";
+        private readonly string token = "H9xO4+R8GUy+18nUCgPOlg==";
 
-        private static readonly HttpClient client = new ();
+        private HttpClient client = new ();
 
         public RequestUtil()
         {
@@ -22,12 +22,12 @@ namespace SdkApiB2bLibrary.utils
         }
         public async Task<OUT> DoGetAsync(string path, string token, Dictionary<String, String> queryParams)
         {
-            client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", token);
+            //client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", token);
             return await DoGetAsync( path,  queryParams);
         }
         public async Task<OUT> DoGetAsync(string path, Dictionary<String, String> queryParams)
         {
-            string fullPath = basePath + path;
+            string fullPath = BASE_PATH + path;
 
             if (queryParams != null)
             {
@@ -55,25 +55,29 @@ namespace SdkApiB2bLibrary.utils
             throw new NotImplementedException();
         }
 
-        public async Task<OUT> DoPostAsync(string path, string token, IN entityIn)
-        {         
+        public async Task<OUT> DoPostAsync(string path, IN entityIn)
+        {
+            string fullPath = BASE_PATH + path;
             string json = System.Text.Json.JsonSerializer.Serialize(entityIn);
             Console.WriteLine($"body entrada: {json}");
             StringContent data = new(json, Encoding.UTF8, "application/json");
-            client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", token);
-            HttpResponseMessage response = await client.PostAsync(path, data);
+            HttpResponseMessage response = await client.PostAsync(fullPath, data);
             string jsonContent = response.Content.ReadAsStringAsync().Result;   
             var result = JsonConvert.DeserializeObject<OUT>(jsonContent);
             return result;
         }
 
-        public async Task<OUT> DoPatchPostAsync(string path, string token, IN entityIn)
+        public async Task<OUT> DoPatchPostAsync(string path, IN entityIn)
         {
-            string json = System.Text.Json.JsonSerializer.Serialize(entityIn);
+            string fullPath = BASE_PATH + path;
+            string json = JsonConvert.SerializeObject(entityIn, Formatting.None,
+                new JsonSerializerSettings
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
             Console.WriteLine($"body entrada: {json}");
             StringContent data = new(json, Encoding.UTF8, "application/json");
-            client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", token);
-            HttpResponseMessage response = await client.PatchAsync(path, data);
+            HttpResponseMessage response = await client.PatchAsync(fullPath, data);
             string jsonContent = response.Content.ReadAsStringAsync().Result;
             var result = JsonConvert.DeserializeObject<OUT>(jsonContent);
             return result;

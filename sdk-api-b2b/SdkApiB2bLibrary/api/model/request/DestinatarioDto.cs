@@ -12,5 +12,6 @@ namespace SdkApiB2bLibrary.api.model.request
         public string CpfCnpj { get; set; }
         public string InscricaoEstadual { get; set; }
         public string Email { get; set; }
+        public int Administrador { get; set; }
     }
 }

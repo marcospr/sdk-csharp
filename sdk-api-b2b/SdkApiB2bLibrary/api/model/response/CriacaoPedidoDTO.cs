@@ -9,7 +9,7 @@ namespace SdkApiB2bLibrary.api.model.response
 {
     public class CriacaoPedidoDTO
     {
-         public List<CriacaoPedido> Data { get; set; }
+         public CriacaoPedido Data { get; set; }
 
         public Error Error { get; set; }
     }

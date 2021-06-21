@@ -9,7 +9,6 @@ namespace SdkApiB2bLibrary.api.client
     public class ApiException : Exception
     {
         public int Code { get;  } = 0;
-        public String Message { get;  }
         public Dictionary<String, List<Object>> ResponseHeaders { get;  }
         public String ResponseBody { get;  }
 
@@ -19,14 +18,12 @@ namespace SdkApiB2bLibrary.api.client
 
         public ApiException(int code, String message) : base(message)
         {
-            this.Code = code;
-            this.Message = message;
+            this.Code = code;            
         }
 
-        public ApiException(int code, String message, Dictionary<String, List<Object>> responseHeaders, String responseBody)
+        public ApiException(int code, String message, Dictionary<String, List<Object>> responseHeaders, String responseBody) : base(message)
         {
             this.Code = code;
-            this.Message = message;
             this.ResponseHeaders = responseHeaders;
             this.ResponseBody = responseBody;
         }
