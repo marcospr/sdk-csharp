@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace SdkApiB2bTest
 {
@@ -20,6 +21,9 @@ namespace SdkApiB2bTest
         public async Task TestValidaChaveAsync()
         {
             ChaveDTO dto = await api.GetChave();
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            Console.WriteLine("Response:");
+            Console.WriteLine(JsonSerializer.Serialize(dto, options));
             Assert.IsNotNull(dto);
             Assert.AreEqual(chave, dto.Data.ChavePublica);
 
