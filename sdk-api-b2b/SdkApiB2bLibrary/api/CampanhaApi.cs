@@ -27,15 +27,11 @@ namespace SdkApiLibrary
 
         public async Task<FormasPagamentoDTO> GetOpcoesPagamentoAsync(String idCampanha, String cnpj)
         {
-<<<<<<< Updated upstream
-            Dictionary<String, String> queryParams = new();
-            queryParams.Add("cnpj", cnpj);
-=======
             Dictionary<String, String> queryParams = new()
             {
                 { "cnpj", cnpj }
             };
->>>>>>> Stashed changes
+
             FormasPagamentoDTO response = await requestFormasPagamento.DoGetAsync("/campanhas/" + idCampanha + "/formas-pagamento/opcoes-parcelamento", queryParams);
             return response;
         }
