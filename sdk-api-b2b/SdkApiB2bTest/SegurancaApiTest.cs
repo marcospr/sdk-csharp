@@ -22,8 +22,7 @@ namespace SdkApiB2bTest
         {
             ChaveDTO dto = await api.GetChave();
             var options = new JsonSerializerOptions { WriteIndented = true };
-            Console.WriteLine("Response:");
-            Console.WriteLine(JsonSerializer.Serialize(dto, options));
+            Console.WriteLine($"Response:{JsonSerializer.Serialize(dto, options)}");
             Assert.IsNotNull(dto);
             Assert.AreEqual(chave, dto.Data.ChavePublica);
 

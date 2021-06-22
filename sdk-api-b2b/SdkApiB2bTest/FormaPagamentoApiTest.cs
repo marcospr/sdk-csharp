@@ -19,8 +19,7 @@ namespace SdkApiB2bTest
         {
             var dto = await api.GetOpcoesParcelamentoAsync("1", "5940", "57.822.975/0001-12", "1000");
             var options = new JsonSerializerOptions { WriteIndented = true };
-            Console.WriteLine("Response:");
-            Console.WriteLine(JsonSerializer.Serialize(dto, options));
+            Console.WriteLine($"Response:{JsonSerializer.Serialize(dto, options)}");
             Assert.IsNotNull(dto);
             Assert.AreEqual(1000.0D, dto.Data[0].ValorParcela);
         }
@@ -30,8 +29,7 @@ namespace SdkApiB2bTest
         {
             var dto = await api.GetOpcoesParcelamentoAsync("8", "5940", "57.822.975/0001-12", "1000");
             var options = new JsonSerializerOptions { WriteIndented = true };
-            Console.WriteLine("Response:");
-            Console.WriteLine(JsonSerializer.Serialize(dto, options));
+            Console.WriteLine($"Response:{JsonSerializer.Serialize(dto, options)}");
             Assert.IsNotNull(dto);
             Assert.IsTrue(!dto.Data.Any());
             Assert.IsTrue(dto.Error.Code == null);
