@@ -421,10 +421,78 @@ namespace SdkApiB2bTest
             Assert.AreEqual(pedidoHelper.IdPedido, pedido.Data.Pedido.CodigoPedido);
         }
 
+
         [TestMethod]
         public void H_TestGetNotaFiscalPedidoPdf()
         {
             throw new NotImplementedException("H_TestGetNotaFiscalPedidoPdf");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ApiException))]
+        public async Task I_TestGetDadosPedidoParceiroFail()
+        {
+            Dictionary<String, String> queryParams = new();
+            queryParams.Add("request.idCompra", pedidoHelper.IdPedido.ToString());
+            queryParams.Add("request.cnpj", CNPJ);
+            queryParams.Add("request.idCampanha", ID_CAMPANHA.ToString());
+            queryParams.Add("request.idPedidoParceiro", pedidoHelper.IdPedidoParceiro.ToString());
+
+            PedidoParceiroData pedido;
+
+            pedido = await pedidoApi.GetDadosPedidoParceiro(null, queryParams);       
+                        
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ApiException))]
+        public async Task J_TestPostCalcularCarrinhoParaCriacaoPedidoFail()
+        {
+            CalculoCarrinho calculoCarrinho;
+
+            calculoCarrinho = await pedidoApi.PostCalcularCarrinho(null);           
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ApiException))]
+        public async Task K_TestPatchPedidosCancelamentoFail()
+        {
+            ConfirmacaoReqDTO dto = new();
+            dto.IdCampanha = ID_CAMPANHA;
+            dto.IdPedidoParceiro = pedidoHelper.IdPedidoParceiro;
+            dto.Cancelado = true;
+            dto.Confirmado = false;
+            dto.IdPedidoMktplc = "1-01";
+            dto.MotivoCancelamento = "teste";
+            dto.Parceiro = "BANCO INTER";
+
+            ConfirmacaoDTO confirmacaoDto = await pedidoApi.PatchPedidosCancelamentoOrConfirmacao(dto, null);
+           
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ApiException))]
+        public async Task L_TestPatchPedidosConfirmacaoFail()
+        {
+            Dictionary<String, String> variableParams = new();
+            variableParams.Add("idCompra", pedidoHelperComCartao.IdPedido.ToString());
+
+            ConfirmacaoDTO confirmacaoDto = await pedidoApi.PatchPedidosCancelamentoOrConfirmacao(null, variableParams);                   
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ApiException))]
+        public async Task M_TestGetNotaFiscalPedidoPdfFail()
+        {
+            string response;
+            response = await pedidoApi.GetNotaFiscalPedido(null);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ApiException))]
+        public async Task N_TestPostCriarPedidoFail()
+        {
+            CriacaoPedidoDTO criacaoPedidoDTO = await pedidoApi.PostCriarPedido(null);
         }
 
         private String Json(Object o)
