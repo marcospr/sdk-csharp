@@ -20,11 +20,7 @@ namespace SdkApiB2bLibrary.utils
             client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", token);
 
         }
-        public async Task<OUT> DoGetAsync(string path, string token, Dictionary<String, String> queryParams)
-        {
-            //client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", token);
-            return await DoGetAsync( path,  queryParams);
-        }
+
         public async Task<OUT> DoGetAsync(string path, Dictionary<String, String> queryParams)
         {
             string fullPath = BASE_PATH + path;
@@ -50,10 +46,6 @@ namespace SdkApiB2bLibrary.utils
             return default;
         }
 
-        internal void DoGetAsync(object p)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task<OUT> DoPostAsync(string path, IN entityIn)
         {
